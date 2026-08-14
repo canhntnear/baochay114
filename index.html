@@ -31,8 +31,8 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 24px 0 100px 0;
-            background-color: #0d1117;
+            padding: 24px 0;
+            background-color: #0b0f17;
             color: #f8fafc;
             text-align: center;
             box-sizing: border-box;
@@ -41,15 +41,15 @@
         }
 
         /* ---------------------------------------------------- */
-        /* HIỆU ỨNG TRỐNG ĐỒNG & LINE NEON XOAY CHÌM DƯỚI CÙNG  */
+        /* TRỐNG ĐỒNG VÀ LINE NEON NẰM CỐ ĐỊNH CHÍNH GIỮA TÂM   */
         /* ---------------------------------------------------- */
         .bg-pattern-container {
             position: fixed;
-            bottom: -220px;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 560px;
-            height: 560px;
+            transform: translate(-50%, -50%);
+            width: min(90vw, 520px);
+            height: min(90vw, 520px);
             pointer-events: none;
             z-index: 0;
             display: flex;
@@ -57,7 +57,7 @@
             align-items: center;
         }
 
-        /* Vòng hào quang Neon xoay ngược chiều tạo tương phản */
+        /* Vòng hào quang Neon Đỏ PCCC & Vàng hổ phách tỏa nhẹ */
         .bg-neon-aura {
             position: absolute;
             width: 100%;
@@ -65,38 +65,38 @@
             border-radius: 50%;
             background: conic-gradient(
                 from 0deg,
-                rgba(239, 68, 68, 0.22) 0%,
-                rgba(245, 158, 11, 0.18) 25%,
+                rgba(239, 68, 68, 0.18) 0%,
+                rgba(245, 158, 11, 0.14) 25%,
                 transparent 50%,
-                rgba(239, 68, 68, 0.25) 75%,
+                rgba(239, 68, 68, 0.2) 75%,
                 transparent 100%
             );
-            filter: blur(28px);
-            animation: neonPulse 14s linear infinite;
+            filter: blur(35px);
+            animation: neonPulse 16s linear infinite;
         }
 
-        /* Đường line Neon quét chìm */
+        /* Vòng Line Neon chìm quét xoay */
         .bg-neon-ring {
             position: absolute;
-            width: 90%;
-            height: 90%;
+            width: 95%;
+            height: 95%;
             border-radius: 50%;
             border: 1.5px solid transparent;
-            border-top: 1.5px solid rgba(239, 68, 68, 0.6);
-            border-bottom: 1.5px solid rgba(245, 158, 11, 0.6);
-            filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.5));
+            border-top: 1.5px solid rgba(239, 68, 68, 0.55);
+            border-bottom: 1.5px solid rgba(245, 158, 11, 0.55);
+            filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.45));
             animation: rotateClockwise 25s linear infinite;
         }
 
-        /* Ảnh trống đồng xoay nhẹ theo chiều kim đồng hồ */
+        /* Ảnh trống đồng xoay tròn đều đặn theo chiều kim đồng hồ */
         .bg-trongdong {
             position: absolute;
-            width: 82%;
-            height: 82%;
+            width: 86%;
+            height: 86%;
             background: url("https://raw.githubusercontent.com/canhntnear/giamsatxe.net/main/trong-dong-o.png") no-repeat center center;
             background-size: contain;
-            opacity: 0.16;
-            filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.4));
+            opacity: 0.18;
+            filter: drop-shadow(0 0 14px rgba(239, 68, 68, 0.35));
             animation: rotateClockwise 60s linear infinite;
         }
 
@@ -112,15 +112,15 @@
         }
 
         /* ---------------------------------------------------- */
-        /* THẺ CHÍNH (CARD)                                     */
+        /* THẺ CHÍNH (CARD GLASSMORPHISM)                       */
         /* ---------------------------------------------------- */
         .card {
-            background: rgba(22, 27, 34, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(22, 27, 34, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             padding: 24px 18px;
             border-radius: 20px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(239, 68, 68, 0.1);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65), 0 0 25px rgba(239, 68, 68, 0.1);
             max-width: 410px;
             width: 92%;
             box-sizing: border-box;
@@ -517,7 +517,7 @@
 </head>
 <body>
 
-    <!-- HIỆU ỨNG TRỐNG ĐỒNG VÀ LINE NEON CHÌM DƯỚI CÙNG -->
+    <!-- TRỐNG ĐỒNG VÀ LINE NEON CHÌM CỐ ĐỊNH CHÍNH GIỮA TÂM -->
     <div class="bg-pattern-container">
         <div class="bg-neon-aura"></div>
         <div class="bg-neon-ring"></div>
