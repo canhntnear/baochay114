@@ -7,7 +7,7 @@
     <!-- ================= SEO Meta Tags ================= -->
     <title>Ứng dụng Báo Cháy 114 - Cục Cảnh sát PCCC & CNCH</title>
     <meta name="description" content="Ứng dụng Báo cháy 114 hỗ trợ người dân thông báo cho Cảnh sát PCCC và CNCH các vụ cháy, nổ, sự cố, tai nạn nhanh và chính xác nhất qua hình ảnh, video, âm thanh; kết nối ứng dụng VNeID xác thực tài khoản chính chủ.">
-    <meta name="keywords" content="Báo cháy 114, Cảnh sát PCCC, Cứu nạn cứu hộ, App báo cháy 114, VNeID, Vạn Phú Khánh, 114, 115">
+    <meta name="keywords" content="Báo cháy 114, Cảnh sát PCCC, Cứu nạn cứu hộ, App báo cháy 114, VNeID, Vạn Phú Khánh, GPS Khánh Hòa, Giám sát xe, 114, 115">
     <meta name="author" content="Cục Cảnh sát PCCC & CNCH">
     <link rel="icon" href="https://raw.githubusercontent.com/canhntnear/baochay114/main/Logo114VPK.png" type="image/png">
 
@@ -43,7 +43,7 @@
             padding: 24px 18px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
+            max-width: 410px;
             width: 92%;
             box-sizing: border-box;
             border: 1px solid rgba(239, 68, 68, 0.25);
@@ -54,8 +54,8 @@
         /* ---------------------------------------------------- */
         .radar-box {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 95px;
+            height: 95px;
             margin: 0 auto 10px auto;
             display: flex;
             justify-content: center;
@@ -89,8 +89,8 @@
         }
 
         .app-logo {
-            width: 70px;
-            height: 70px;
+            width: 68px;
+            height: 68px;
             object-fit: contain;
             position: relative;
             z-index: 2;
@@ -109,7 +109,7 @@
         }
 
         .brand-header {
-            font-size: 11.5px;
+            font-size: 11px;
             color: #f59e0b;
             font-weight: 700;
             margin-bottom: 10px;
@@ -161,6 +161,11 @@
             color: #4ade80;
         }
 
+        .step-item.warning {
+            color: #f87171;
+            font-weight: 600;
+        }
+
         .step-status {
             font-size: 11px;
             font-weight: bold;
@@ -180,6 +185,23 @@
             height: 100%;
             background: linear-gradient(90deg, #ef4444, #f59e0b, #4ade80);
             transition: width 0.4s ease;
+        }
+
+        /* Cảnh báo dành riêng cho Máy tính */
+        .pc-warning-box {
+            display: none;
+            background-color: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin-bottom: 14px;
+            color: #fbbf24;
+            font-size: 12px;
+            line-height: 1.45;
+            text-align: left;
+        }
+        .pc-warning-box.show {
+            display: block;
         }
 
         .btn-group {
@@ -290,23 +312,23 @@
             z-index: 1;
             background-color: #0f172a;
             border-radius: 12px;
-            padding: 14px 16px;
+            padding: 12px 14px;
             text-align: left;
-            font-size: 12.5px;
+            font-size: 12px;
             line-height: 1.5;
             color: #cbd5e1;
             width: 100%;
             box-sizing: border-box;
         }
 
-        /* KHUNG 2: VẠN PHÚ KHÁNH */
+        /* KHUNG 2: 114 VẠN PHÚ KHÁNH */
         .vpk-box {
             background-color: #0f172a;
-            border: 1px solid rgba(34, 197, 94, 0.35);
+            border: 1px solid rgba(56, 189, 248, 0.35);
             border-radius: 12px;
-            padding: 14px 16px;
+            padding: 12px 14px;
             text-align: left;
-            font-size: 12.5px;
+            font-size: 11.5px;
             line-height: 1.5;
             color: #cbd5e1;
             width: 100%;
@@ -317,7 +339,7 @@
         .contact-title {
             font-weight: bold;
             color: #ef4444;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-align: center;
             text-transform: uppercase;
             font-size: 11.5px;
@@ -326,8 +348,8 @@
 
         .vpk-title {
             font-weight: bold;
-            color: #22c55e;
-            margin-bottom: 10px;
+            color: #38bdf8;
+            margin-bottom: 8px;
             text-align: center;
             text-transform: uppercase;
             font-size: 11.5px;
@@ -339,6 +361,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 6px;
         }
 
         .contact-item:last-child {
@@ -349,6 +372,11 @@
             color: #ffffff;
         }
 
+        .contact-item span {
+            flex: 1;
+            text-align: left;
+        }
+
         .phone-link {
             display: inline-flex;
             align-items: center;
@@ -356,10 +384,11 @@
             background-color: #dc2626;
             color: #ffffff;
             text-decoration: none;
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
             border-radius: 50%;
-            font-size: 13px;
+            font-size: 12px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
             transition: transform 0.2s ease;
         }
@@ -369,7 +398,7 @@
         }
 
         .phone-link.phone-vpk {
-            background-color: #16a34a;
+            background-color: #059669;
         }
 
         .phone-link:active {
@@ -381,7 +410,7 @@
             padding-top: 8px;
             border-top: 1px dashed rgba(255, 255, 255, 0.1);
             text-align: center;
-            font-size: 12px;
+            font-size: 11.5px;
         }
 
         .vpk-web a {
@@ -425,7 +454,7 @@
         <!-- BẢNG THEO DÕI CÁC BƯỚC NHẬN DIỆN THIẾT BỊ -->
         <div class="step-list">
             <div id="step-1" class="step-item active">
-                <span>📡 1. Kết nối máy chủ 114</span>
+                <span>📡 1. Kết nối máy chủ</span>
                 <span class="step-status">Đang kết nối...</span>
             </div>
             <div id="step-2" class="step-item">
@@ -441,6 +470,11 @@
             <div class="progress-bar-bg">
                 <div id="progress-fill" class="progress-bar-fill"></div>
             </div>
+        </div>
+
+        <!-- CẢNH BÁO KHI TRUY CẬP BẰNG MÁY TÍNH -->
+        <div id="pc-warning" class="pc-warning-box">
+            ⚠️ <strong>Thông báo:</strong> Ứng dụng "Báo cháy 114" chỉ hỗ trợ cài đặt và sử dụng trên <strong>thiết bị di động</strong> (iOS / Android). Vui lòng sử dụng điện thoại để quét mã hoặc chọn tải trực tiếp vào tài khoản qua các liên kết bên dưới.
         </div>
 
         <!-- 2 NÚT TẢI / TRUY CẬP (IOS & ANDROID) -->
@@ -484,7 +518,17 @@
                 
                 <div class="contact-item">
                     <span><strong>TƯ VẤN THIẾT BỊ PCCC:</strong> 0585.114.114</span>
-                    <a href="tel:0585114114" class="phone-link phone-vpk" title="Gọi ngay 0585114114">📞</a>
+                    <a href="tel:0585114114" class="phone-link phone-vpk" title="Gọi ngay 0585.114.114">📞</a>
+                </div>
+
+                <div class="contact-item">
+                    <span><strong>TƯ VẤN THIẾT BỊ GPS KHÁNH HÒA:</strong> 0569.058.058</span>
+                    <a href="tel:0569058058" class="phone-link phone-vpk" title="Gọi ngay 0569.058.058">📞</a>
+                </div>
+
+                <div class="contact-item">
+                    <span><strong>TƯ VẤN THIẾT BỊ GIÁM SÁT XE:</strong> 0588.588.114</span>
+                    <a href="tel:0588588114" class="phone-link phone-vpk" title="Gọi ngay 0588.588.114">📞</a>
                 </div>
 
                 <div class="vpk-web">
@@ -505,14 +549,18 @@
         window.addEventListener("pagehide", () => { redirectAttempted = true; });
         window.addEventListener("blur", () => { redirectAttempted = true; });
 
-        function updateStep(stepNum, statusText, isCompleted = false) {
+        function updateStep(stepNum, statusText, state = "normal") {
             const stepEl = document.getElementById(`step-${stepNum}`);
             const statusEl = stepEl.querySelector('.step-status');
             
-            if (isCompleted) {
-                stepEl.classList.remove('active');
+            stepEl.classList.remove('active', 'completed', 'warning');
+
+            if (state === "completed") {
                 stepEl.classList.add('completed');
                 statusEl.innerText = "✔ " + statusText;
+            } else if (state === "warning") {
+                stepEl.classList.add('warning');
+                statusEl.innerText = "⚠️ " + statusText;
             } else {
                 stepEl.classList.add('active');
                 statusEl.innerText = statusText;
@@ -521,15 +569,18 @@
 
         function runSystemCheck() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            let redirectUrl = PLAY_STORE_URL;
-            let osName = "Android (Google Play)";
+            let redirectUrl = null;
+            let osName = "Máy tính (PC / Laptop)";
+            let isMobile = false;
 
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 osName = "iOS (App Store)";
                 redirectUrl = APP_STORE_URL;
+                isMobile = true;
             } else if (/android/i.test(userAgent)) {
                 osName = "Android (Google Play)";
                 redirectUrl = PLAY_STORE_URL;
+                isMobile = true;
             }
 
             const progress = document.getElementById('progress-fill');
@@ -537,35 +588,41 @@
             // BƯỚC 1: Kết nối máy chủ (0.6 giây)
             progress.style.width = "35%";
             setTimeout(() => {
-                updateStep(1, "Sẵn sàng", true);
+                updateStep(1, "Sẵn sàng", "completed");
                 
                 // BƯỚC 2: Phân tích thiết bị (1.2 giây)
                 updateStep(2, "Đang phân tích...");
                 progress.style.width = "70%";
                 
                 setTimeout(() => {
-                    updateStep(2, osName, true);
-                    
-                    // BƯỚC 3: Mở App Báo Cháy 114 phù hợp (1.8 giây)
-                    updateStep(3, "Đang định tuyến...");
+                    updateStep(2, osName, "completed");
                     progress.style.width = "100%";
-                    document.getElementById("neon-wrapper").classList.add("redirecting");
 
-                    setTimeout(() => {
-                        updateStep(3, "Mở Store...", true);
-                        window.location.href = redirectUrl;
-                    }, 600);
+                    if (isMobile && redirectUrl) {
+                        // Thiết bị di động: Tiến hành mở ứng dụng
+                        updateStep(3, "Đang định tuyến...");
+                        document.getElementById("neon-wrapper").classList.add("redirecting");
+
+                        setTimeout(() => {
+                            updateStep(3, "Mở Store...", "completed");
+                            window.location.href = redirectUrl;
+                        }, 600);
+
+                        // Fallback nếu trình duyệt nhúng chặn tự nhảy trang
+                        setTimeout(() => {
+                            if (!redirectAttempted) {
+                                document.getElementById("error-message").classList.add("show");
+                            }
+                        }, 3800);
+                    } else {
+                        // Máy tính: Dừng chuyển hướng và đưa ra cảnh báo
+                        updateStep(3, "Yêu cầu di động", "warning");
+                        document.getElementById("pc-warning").classList.add("show");
+                    }
 
                 }, 600);
 
             }, 600);
-
-            // Fallback nếu trình duyệt Zalo/FB chặn tự động chuyển link
-            setTimeout(() => {
-                if (!redirectAttempted) {
-                    document.getElementById("error-message").classList.add("show");
-                }
-            }, 3800);
         }
 
         window.onload = runSystemCheck;
