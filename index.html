@@ -6,21 +6,21 @@
 
     <!-- ================= SEO Meta Tags ================= -->
     <title>Ứng dụng Báo Cháy 114 - Cục Cảnh sát PCCC & CNCH</title>
-    <meta name="description" content="Ứng dụng Báo cháy 114 - Thông báo sự cố cháy, nổ, tai nạn và yêu cầu cứu nạn cứu hộ trực tiếp đến Trung tâm thông tin chỉ huy 114">
-    <meta name="keywords" content="Báo cháy 114, Cảnh sát PCCC, Cứu nạn cứu hộ, App báo cháy 114, Vạn Phú Khánh, 114">
+    <meta name="description" content="Ứng dụng Báo cháy 114 hỗ trợ người dân thông báo cho Cảnh sát PCCC và CNCH các vụ cháy, nổ, sự cố, tai nạn nhanh và chính xác nhất qua hình ảnh, video, âm thanh; kết nối ứng dụng VNeID xác thực tài khoản chính chủ.">
+    <meta name="keywords" content="Báo cháy 114, Cảnh sát PCCC, Cứu nạn cứu hộ, App báo cháy 114, VNeID, Vạn Phú Khánh, 114, 115">
     <meta name="author" content="Cục Cảnh sát PCCC & CNCH">
     <link rel="icon" href="https://raw.githubusercontent.com/canhntnear/baochay114/main/Logo114VPK.png" type="image/png">
 
     <!-- ================= Social Media Meta Tags (Facebook, Zalo, Open Graph) ================= -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tải Ứng Dụng Báo Cháy 114 - Bộ Công An">
-    <meta property="og:description" content="Hỗ trợ người dân gọi báo cháy video call, gửi tin báo sự cố khẩn cấp trực tiếp đến lực lượng PCCC & CNCH 114.">
+    <meta property="og:title" content="Ứng dụng Báo Cháy 114 - Tích hợp định danh VNeID">
+    <meta property="og:description" content="Thông báo sự cố cháy, nổ, cứu nạn cứu hộ trực tiếp qua video call/hình ảnh đến Tổng đài 114. Kết nối xác thực tài khoản chính chủ qua VNeID.">
     <meta property="og:image" content="https://raw.githubusercontent.com/canhntnear/baochay114/main/Logo114VPK.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tải Ứng Dụng Báo Cháy 114 - Bộ Công An">
-    <meta name="twitter:description" content="Hỗ trợ người dân gọi báo cháy video call, gửi tin báo sự cố khẩn cấp trực tiếp đến lực lượng PCCC & CNCH 114.">
+    <meta name="twitter:title" content="Ứng dụng Báo Cháy 114 - Tích hợp định danh VNeID">
+    <meta name="twitter:description" content="Thông báo sự cố cháy, nổ, cứu nạn cứu hộ trực tiếp qua video call/hình ảnh đến Tổng đài 114. Kết nối xác thực tài khoản chính chủ qua VNeID.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/canhntnear/baochay114/main/Logo114VPK.png">
 
     <style>
@@ -31,7 +31,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #0d1117; /* Nền tối phong cách cảnh báo khẩn cấp */
+            background-color: #0d1117;
             color: #f8fafc;
             text-align: center;
         }
@@ -41,10 +41,10 @@
             padding: 28px 20px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            max-width: 380px;
-            width: 90%;
+            max-width: 400px;
+            width: 92%;
             box-sizing: border-box;
-            border: 1px solid rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.25);
         }
 
         /* ---------------------------------------------------- */
@@ -77,7 +77,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: conic-gradient(from 0deg, rgba(239, 68, 68, 0.5), rgba(245, 158, 11, 0.2), transparent 60%);
+            background: conic-gradient(from 0deg, rgba(239, 68, 68, 0.55), rgba(245, 158, 11, 0.25), transparent 60%);
             animation: radarRotate 2s linear infinite;
         }
 
@@ -107,12 +107,21 @@
         }
 
         .brand-header {
-            font-size: 12px;
+            font-size: 11.5px;
             color: #f59e0b;
             font-weight: 700;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .app-desc {
+            font-size: 12.5px;
+            line-height: 1.5;
+            color: #94a3b8;
+            margin-bottom: 16px;
+            padding: 0 4px;
+            text-align: justify;
         }
 
         /* ---------------------------------------------------- */
@@ -284,7 +293,7 @@
         .contact-title {
             font-weight: bold;
             color: #ef4444;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             text-align: center;
             text-transform: uppercase;
             font-size: 12px;
@@ -302,15 +311,13 @@
             color: #ffffff;
         }
 
-        .address-item {
-            margin-bottom: 6px;
-            font-size: 12px;
-        }
-
-        .address-item a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: bold;
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #f59e0b;
+            text-transform: uppercase;
+            margin: 10px 0 6px 0;
+            letter-spacing: 0.5px;
         }
 
         .phone-link {
@@ -328,8 +335,27 @@
             transition: transform 0.2s ease;
         }
 
+        .phone-link.phone-medical {
+            background-color: #0284c7;
+        }
+
+        .phone-link.phone-support {
+            background-color: #16a34a;
+        }
+
         .phone-link:active {
             transform: scale(0.92);
+        }
+
+        .address-item {
+            margin-bottom: 4px;
+            font-size: 12px;
+        }
+
+        .address-item a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .error-message {
@@ -358,7 +384,11 @@
         </div>
         
         <h1>APP BÁO CHÁY 114</h1>
-        <div class="brand-header">CỤC CẢNH SÁT PCCC & CNCH</div>
+        <div class="brand-header">CỤC CẢNH SÁT PCCC & CNCH - BỘ CÔNG AN</div>
+
+        <div class="app-desc">
+            Hỗ trợ người dân thông báo cho Cảnh sát PCCC và CNCH các vụ cháy, nổ, sự cố, tai nạn nhanh và chính xác nhất qua hình ảnh, video, âm thanh gọi/gửi trực tiếp tới Tổng đài 114. Kết nối xác thực tài khoản chính chủ qua VNeID.
+        </div>
 
         <!-- BẢNG THEO DÕI CÁC BƯỚC NHẬN DIỆN THIẾT BỊ -->
         <div class="step-list">
@@ -396,7 +426,7 @@
             ⚠️ Tự động chuyển hướng bị chặn bởi trình duyệt. Vui lòng bấm chọn phiên bản ứng dụng phía trên.
         </div>
 
-        <!-- BẢNG THÔNG TIN ĐƯỜNG DÂY NÓNG CỨU HỘ -->
+        <!-- BẢNG THÔNG TIN ĐƯỜNG DÂY NÓNG KHẨN CẤP -->
         <div id="neon-wrapper" class="neon-wrapper">
             <div class="contact-box">
                 <div class="contact-title">ĐƯỜNG DÂY NÓNG KHẨN CẤP</div>
@@ -407,18 +437,20 @@
                 </div>
 
                 <div class="contact-item">
-                    <span><strong>TƯ VẤN THIẾT BỊ PCCC:</strong> 0389 58 12 34</span>
-                    <a href="tel:0389581234" class="phone-link" title="Gọi ngay">📞</a>
+                    <span><strong>CỨU NẠN Y TẾ:</strong> 115</span>
+                    <a href="tel:115" class="phone-link phone-medical" title="Gọi ngay 115">📞</a>
                 </div>
+
+                <div class="section-label">114 VẠN PHÚ KHÁNH</div>
 
                 <div class="contact-item">
-                    <span><strong>HỖ TRỢ KỸ THUẬT:</strong> 0397 08 12 34</span>
-                    <a href="tel:0397081234" class="phone-link" title="Gọi ngay">📞</a>
+                    <span><strong>TƯ VẤN THIẾT BỊ PCCC:</strong> 0585.114.114</span>
+                    <a href="tel:0585114114" class="phone-link phone-support" title="Gọi 0585114114">📞</a>
                 </div>
 
-                <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 8px 0;">
+                <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 10px 0 8px 0;">
 
-                <div class="address-item"><strong>Đơn vị phát triển:</strong> Cục Cảnh sát PCCC & CNCH</div>
+                <div class="address-item"><strong>Cơ quan chủ quản:</strong> Cục Cảnh sát PCCC & CNCH</div>
                 <div class="address-item"><strong>Đối tác kỹ thuật:</strong> <a href="http://vanphukhanh.com" target="_blank">vanphukhanh.com</a></div>
             </div>
         </div>
@@ -450,7 +482,7 @@
 
         function runSystemCheck() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            let redirectUrl = PLAY_STORE_URL; // Mặc định chuyển sang Google Play nếu không xác định
+            let redirectUrl = PLAY_STORE_URL;
             let osName = "Android (Google Play)";
 
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -489,7 +521,7 @@
 
             }, 600);
 
-            // Xử lý Fallback nếu trình duyệt Zalo/FB chặn tự động nhảy link
+            // Fallback nếu trình duyệt Zalo/FB chặn tự động chuyển link
             setTimeout(() => {
                 if (!redirectAttempted) {
                     document.getElementById("error-message").classList.add("show");
