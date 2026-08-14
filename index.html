@@ -31,22 +31,102 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px 0;
+            padding: 24px 0 100px 0;
             background-color: #0d1117;
             color: #f8fafc;
             text-align: center;
             box-sizing: border-box;
+            position: relative;
+            overflow-x: hidden;
         }
 
+        /* ---------------------------------------------------- */
+        /* HIỆU ỨNG TRỐNG ĐỒNG & LINE NEON XOAY CHÌM DƯỚI CÙNG  */
+        /* ---------------------------------------------------- */
+        .bg-pattern-container {
+            position: fixed;
+            bottom: -220px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 560px;
+            height: 560px;
+            pointer-events: none;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Vòng hào quang Neon xoay ngược chiều tạo tương phản */
+        .bg-neon-aura {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg,
+                rgba(239, 68, 68, 0.22) 0%,
+                rgba(245, 158, 11, 0.18) 25%,
+                transparent 50%,
+                rgba(239, 68, 68, 0.25) 75%,
+                transparent 100%
+            );
+            filter: blur(28px);
+            animation: neonPulse 14s linear infinite;
+        }
+
+        /* Đường line Neon quét chìm */
+        .bg-neon-ring {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            border: 1.5px solid transparent;
+            border-top: 1.5px solid rgba(239, 68, 68, 0.6);
+            border-bottom: 1.5px solid rgba(245, 158, 11, 0.6);
+            filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.5));
+            animation: rotateClockwise 25s linear infinite;
+        }
+
+        /* Ảnh trống đồng xoay nhẹ theo chiều kim đồng hồ */
+        .bg-trongdong {
+            position: absolute;
+            width: 82%;
+            height: 82%;
+            background: url("https://raw.githubusercontent.com/canhntnear/giamsatxe.net/main/trong-dong-o.png") no-repeat center center;
+            background-size: contain;
+            opacity: 0.16;
+            filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.4));
+            animation: rotateClockwise 60s linear infinite;
+        }
+
+        @keyframes rotateClockwise {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes neonPulse {
+            0% { transform: rotate(0deg) scale(0.95); opacity: 0.7; }
+            50% { transform: rotate(180deg) scale(1.05); opacity: 1; }
+            100% { transform: rotate(360deg) scale(0.95); opacity: 0.7; }
+        }
+
+        /* ---------------------------------------------------- */
+        /* THẺ CHÍNH (CARD)                                     */
+        /* ---------------------------------------------------- */
         .card {
-            background: #161b22;
+            background: rgba(22, 27, 34, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 24px 18px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(239, 68, 68, 0.1);
             max-width: 410px;
             width: 92%;
             box-sizing: border-box;
-            border: 1px solid rgba(239, 68, 68, 0.25);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            position: relative;
+            z-index: 1;
         }
 
         /* ---------------------------------------------------- */
@@ -130,7 +210,7 @@
         /* TIẾN TRÌNH CHECK TỪNG BƯỚC HỆ THỐNG 114             */
         /* ---------------------------------------------------- */
         .step-list {
-            background: rgba(13, 17, 23, 0.7);
+            background: rgba(13, 17, 23, 0.75);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             padding: 10px 14px;
@@ -187,10 +267,10 @@
             transition: width 0.4s ease;
         }
 
-        /* Cảnh báo dành riêng cho Máy tính */
+        /* Cảnh báo khi truy cập bằng máy tính */
         .pc-warning-box {
             display: none;
-            background-color: rgba(245, 158, 11, 0.12);
+            background-color: rgba(245, 158, 11, 0.14);
             border: 1px solid rgba(245, 158, 11, 0.4);
             border-radius: 10px;
             padding: 10px 12px;
@@ -437,6 +517,13 @@
 </head>
 <body>
 
+    <!-- HIỆU ỨNG TRỐNG ĐỒNG VÀ LINE NEON CHÌM DƯỚI CÙNG -->
+    <div class="bg-pattern-container">
+        <div class="bg-neon-aura"></div>
+        <div class="bg-neon-ring"></div>
+        <div class="bg-trongdong"></div>
+    </div>
+
     <div class="card">
         <!-- KHU VỰC RADAR BÁO CHÁY & LOGO -->
         <div class="radar-box">
@@ -599,7 +686,7 @@
                     progress.style.width = "100%";
 
                     if (isMobile && redirectUrl) {
-                        // Thiết bị di động: Tiến hành mở ứng dụng
+                        // Thiết bị di động: Mở ứng dụng
                         updateStep(3, "Đang định tuyến...");
                         document.getElementById("neon-wrapper").classList.add("redirecting");
 
