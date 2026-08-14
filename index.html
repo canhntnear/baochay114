@@ -41,12 +41,10 @@
         }
 
         /* ---------------------------------------------------- */
-        /* HIỆU ỨNG 2 TRỐNG ĐỒNG & LINE NEON (TĂNG ~60% KÍCH THƯỚC) */
+        /* HIỆU ỨNG 2 TRỐNG ĐỒNG & LINE NEON XOAY CHÌM 2 GÓC    */
         /* ---------------------------------------------------- */
         .bg-pattern-corner {
             position: fixed;
-            width: min(115vw, 680px);
-            height: min(115vw, 680px);
             pointer-events: none;
             z-index: 0;
             display: flex;
@@ -54,16 +52,20 @@
             align-items: center;
         }
 
-        /* Vị trí 1: Trên cùng bên Trái */
+        /* Vị trí 1: Trên cùng bên Trái (GIỮ NGUYÊN KÍCH THƯỚC) */
         .corner-top-left {
+            width: min(115vw, 680px);
+            height: min(115vw, 680px);
             top: -200px;
             left: -200px;
         }
 
-        /* Vị trí 2: Dưới cùng bên Phải */
+        /* Vị trí 2: Dưới cùng bên Phải (TĂNG THÊM 60% KÍCH CỠ) */
         .corner-bottom-right {
-            bottom: -200px;
-            right: -200px;
+            width: min(180vw, 1080px);
+            height: min(180vw, 1080px);
+            bottom: -320px;
+            right: -320px;
         }
 
         /* Vòng hào quang Neon Đỏ PCCC & Vàng hổ phách */
@@ -80,7 +82,7 @@
                 rgba(239, 68, 68, 0.25) 85%,
                 transparent 100%
             );
-            filter: blur(45px);
+            filter: blur(50px);
             animation: neonPulse 14s linear infinite;
         }
 
@@ -93,7 +95,7 @@
             border: 1.5px solid transparent;
             border-top: 1.5px solid rgba(239, 68, 68, 0.55);
             border-bottom: 1.5px solid rgba(245, 158, 11, 0.55);
-            filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.5));
+            filter: drop-shadow(0 0 14px rgba(239, 68, 68, 0.5));
             animation: rotateClockwise 25s linear infinite;
         }
 
@@ -104,7 +106,7 @@
             height: 84%;
             background: url("https://raw.githubusercontent.com/canhntnear/giamsatxe.net/main/trong-dong-o.png") no-repeat center center;
             background-size: contain;
-            opacity: 0.17;
+            opacity: 0.16;
             filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.38));
             animation: rotateClockwise 60s linear infinite;
         }
@@ -526,14 +528,14 @@
 </head>
 <body>
 
-    <!-- BỨC 1: TRỐNG ĐỒNG & LINE NEON TRÊN CÙNG BÊN TRÁI (SIZE LỚN) -->
+    <!-- BỨC 1: TRỐNG ĐỒNG TRÊN CÙNG BÊN TRÁI (SIZE TIÊU CHUẨN) -->
     <div class="bg-pattern-corner corner-top-left">
         <div class="bg-neon-aura"></div>
         <div class="bg-neon-ring"></div>
         <div class="bg-trongdong"></div>
     </div>
 
-    <!-- BỨC 2: TRỐNG ĐỒNG & LINE NEON DƯỚI CÙNG BÊN PHẢI (SIZE LỚN) -->
+    <!-- BỨC 2: TRỐNG ĐỒNG DƯỚI CÙNG BÊN PHẢI (TĂNG THÊM 60% KÍCH CỠ) -->
     <div class="bg-pattern-corner corner-bottom-right">
         <div class="bg-neon-aura"></div>
         <div class="bg-neon-ring"></div>
