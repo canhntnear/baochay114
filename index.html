@@ -31,14 +31,16 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px 0;
             background-color: #0d1117;
             color: #f8fafc;
             text-align: center;
+            box-sizing: border-box;
         }
 
         .card {
             background: #161b22;
-            padding: 28px 20px;
+            padding: 24px 18px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             max-width: 400px;
@@ -52,9 +54,9 @@
         /* ---------------------------------------------------- */
         .radar-box {
             position: relative;
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 12px auto;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 10px auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -87,8 +89,8 @@
         }
 
         .app-logo {
-            width: 75px;
-            height: 75px;
+            width: 70px;
+            height: 70px;
             object-fit: contain;
             position: relative;
             z-index: 2;
@@ -99,7 +101,7 @@
         }
 
         h1 {
-            font-size: 20px;
+            font-size: 19px;
             color: #ffffff;
             margin: 0 0 4px 0;
             letter-spacing: 0.5px;
@@ -116,10 +118,10 @@
         }
 
         .app-desc {
-            font-size: 12.5px;
+            font-size: 12px;
             line-height: 1.5;
             color: #94a3b8;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             padding: 0 4px;
             text-align: justify;
         }
@@ -131,8 +133,8 @@
             background: rgba(13, 17, 23, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
-            padding: 12px 16px;
-            margin-bottom: 16px;
+            padding: 10px 14px;
+            margin-bottom: 14px;
             text-align: left;
         }
 
@@ -140,9 +142,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 12px;
+            font-size: 11.5px;
             color: #94a3b8;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             transition: all 0.3s ease;
         }
 
@@ -169,7 +171,7 @@
             height: 4px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 2px;
-            margin-top: 10px;
+            margin-top: 8px;
             overflow: hidden;
         }
 
@@ -183,8 +185,8 @@
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 8px;
+            margin-bottom: 16px;
         }
 
         /* ---------------------------------------------------- */
@@ -195,11 +197,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 16px;
+            padding: 11px 14px;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13.5px;
             color: #ffffff;
             overflow: hidden;
             transition: transform 0.2s ease;
@@ -239,8 +241,15 @@
         .btn-android { background-color: #01875f; }
 
         /* ---------------------------------------------------- */
-        /* BẢNG VIỀN LED NEON KHẨN CẤP                          */
+        /* 2 KHUNG THÔNG TIN RIÊNG BIỆT                         */
         /* ---------------------------------------------------- */
+        .info-card-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* KHUNG 1: VIỀN LED NEON KHẨN CẤP */
         .neon-wrapper {
             position: relative;
             border-radius: 14px;
@@ -281,22 +290,47 @@
             z-index: 1;
             background-color: #0f172a;
             border-radius: 12px;
-            padding: 16px;
+            padding: 14px 16px;
             text-align: left;
-            font-size: 13px;
-            line-height: 1.6;
+            font-size: 12.5px;
+            line-height: 1.5;
             color: #cbd5e1;
             width: 100%;
             box-sizing: border-box;
         }
 
+        /* KHUNG 2: VẠN PHÚ KHÁNH */
+        .vpk-box {
+            background-color: #0f172a;
+            border: 1px solid rgba(34, 197, 94, 0.35);
+            border-radius: 12px;
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 12.5px;
+            line-height: 1.5;
+            color: #cbd5e1;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .contact-title {
             font-weight: bold;
             color: #ef4444;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             text-align: center;
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 11.5px;
+            letter-spacing: 0.5px;
+        }
+
+        .vpk-title {
+            font-weight: bold;
+            color: #22c55e;
+            margin-bottom: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 11.5px;
             letter-spacing: 0.5px;
         }
 
@@ -307,17 +341,12 @@
             align-items: center;
         }
 
-        .contact-item strong {
-            color: #ffffff;
+        .contact-item:last-child {
+            margin-bottom: 0;
         }
 
-        .section-label {
-            font-size: 11px;
-            font-weight: 700;
-            color: #f59e0b;
-            text-transform: uppercase;
-            margin: 10px 0 6px 0;
-            letter-spacing: 0.5px;
+        .contact-item strong {
+            color: #ffffff;
         }
 
         .phone-link {
@@ -339,7 +368,7 @@
             background-color: #0284c7;
         }
 
-        .phone-link.phone-support {
+        .phone-link.phone-vpk {
             background-color: #16a34a;
         }
 
@@ -347,12 +376,15 @@
             transform: scale(0.92);
         }
 
-        .address-item {
-            margin-bottom: 4px;
+        .vpk-web {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            text-align: center;
             font-size: 12px;
         }
 
-        .address-item a {
+        .vpk-web a {
             color: #38bdf8;
             text-decoration: none;
             font-weight: bold;
@@ -361,8 +393,8 @@
         .error-message {
             color: #f87171;
             font-size: 12px;
-            margin-bottom: 15px;
-            padding: 10px;
+            margin-bottom: 12px;
+            padding: 8px 10px;
             background-color: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.3);
             border-radius: 8px;
@@ -387,7 +419,7 @@
         <div class="brand-header">CỤC CẢNH SÁT PCCC & CNCH - BỘ CÔNG AN</div>
 
         <div class="app-desc">
-            Hỗ trợ người dân thông báo cho Cảnh sát PCCC và CNCH các vụ cháy, nổ, sự cố, tai nạn nhanh và chính xác nhất qua hình ảnh, video, âm thanh gọi/gửi trực tiếp tới Tổng đài 114. Kết nối xác thực tài khoản chính chủ qua VNeID.
+            Ứng dụng hỗ trợ người dân thông báo cho Cảnh sát PCCC và CNCH các vụ cháy, nổ, sự cố, tai nạn nhanh và chính xác nhất thông qua hình ảnh, video, âm thanh gọi/gửi trực tiếp tới Tổng đài 114 kết nối với ứng dụng VNeID để xác thực tài khoản chính chủ.
         </div>
 
         <!-- BẢNG THEO DÕI CÁC BƯỚC NHẬN DIỆN THIẾT BỊ -->
@@ -426,33 +458,40 @@
             ⚠️ Tự động chuyển hướng bị chặn bởi trình duyệt. Vui lòng bấm chọn phiên bản ứng dụng phía trên.
         </div>
 
-        <!-- BẢNG THÔNG TIN ĐƯỜNG DÂY NÓNG KHẨN CẤP -->
-        <div id="neon-wrapper" class="neon-wrapper">
-            <div class="contact-box">
-                <div class="contact-title">ĐƯỜNG DÂY NÓNG KHẨN CẤP</div>
+        <!-- NHÓM 2 KHUNG THÔNG TIN RIÊNG BIỆT -->
+        <div class="info-card-group">
+            
+            <!-- KHUNG 1: ĐƯỜNG DÂY NÓNG KHẨN CẤP -->
+            <div id="neon-wrapper" class="neon-wrapper">
+                <div class="contact-box">
+                    <div class="contact-title">ĐƯỜNG DÂY NÓNG KHẨN CẤP</div>
+                    
+                    <div class="contact-item">
+                        <span><strong>CỨU HỎA - CỨU NẠN:</strong> 114</span>
+                        <a href="tel:114" class="phone-link" title="Gọi ngay 114">📞</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <span><strong>CỨU NẠN Y TẾ:</strong> 115</span>
+                        <a href="tel:115" class="phone-link phone-medical" title="Gọi ngay 115">📞</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KHUNG 2: 114 VẠN PHÚ KHÁNH -->
+            <div class="vpk-box">
+                <div class="vpk-title">114 VẠN PHÚ KHÁNH</div>
                 
                 <div class="contact-item">
-                    <span><strong>CỨU HỎA - CỨU NẠN:</strong> 114</span>
-                    <a href="tel:114" class="phone-link" title="Gọi ngay 114">📞</a>
-                </div>
-
-                <div class="contact-item">
-                    <span><strong>CỨU NẠN Y TẾ:</strong> 115</span>
-                    <a href="tel:115" class="phone-link phone-medical" title="Gọi ngay 115">📞</a>
-                </div>
-
-                <div class="section-label">114 VẠN PHÚ KHÁNH</div>
-
-                <div class="contact-item">
                     <span><strong>TƯ VẤN THIẾT BỊ PCCC:</strong> 0585.114.114</span>
-                    <a href="tel:0585114114" class="phone-link phone-support" title="Gọi 0585114114">📞</a>
+                    <a href="tel:0585114114" class="phone-link phone-vpk" title="Gọi ngay 0585114114">📞</a>
                 </div>
 
-                <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 10px 0 8px 0;">
-
-                <div class="address-item"><strong>Cơ quan chủ quản:</strong> Cục Cảnh sát PCCC & CNCH</div>
-                <div class="address-item"><strong>Đối tác kỹ thuật:</strong> <a href="http://vanphukhanh.com" target="_blank">vanphukhanh.com</a></div>
+                <div class="vpk-web">
+                    Website: <a href="http://vanphukhanh.com" target="_blank">vanphukhanh.com</a>
+                </div>
             </div>
+
         </div>
     </div>
 
